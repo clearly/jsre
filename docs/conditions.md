@@ -30,8 +30,10 @@ The value of the `not` property is the actual operator.
 * `equal`
 * `greatherThan`
 * `lessThan`
+* `in` - Tests if a single value or a sebset of values in the `lhs` exist in the `rhs`
 
 ## Values (`lhs` and `rhs`)
+All condition operations use values to evaluate the condition. The `lhs` and `rhs` value specifications are those values.
 1. A value can be a constant
 1. A value can be a path specification. Path specifications use the `lodash`
 library for path resolution.
