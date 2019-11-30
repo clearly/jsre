@@ -1,0 +1,186 @@
+{
+  "_declaration": {
+    "_attributes": {
+      "version": "1.0",
+      "encoding": "UTF-8",
+      "standalone": "yes"
+    }
+  },
+  "Document": {
+    "_attributes": {
+      "xmlns": "urn:iso:std:iso:20022:tech:xsd:pacs.008.001.02"
+    },
+    "FIToFICstmrCdtTrf": {
+      "GrpHdr": {
+        "MsgId": {
+          "_text": "M20191128bbbbbbbbbbbBAAAnnnnnnnnnnn"
+        },
+        "CreDtTm": {
+          "_text": "2013-11-07T11:41:10"
+        },
+        "NbOfTxs": {
+          "_text": 1
+        },
+        "TtlIntrBkSttlmAmt": {
+          "_attributes": {
+            "Ccy": "EUR"
+          },
+          "_text": 20
+        },
+        "IntrBkSttlmDt": {
+          "_text": "2013-11-07"
+        },
+        "SttlmInf": {
+          "SttlmMtd": {
+            "_text": "CLRG"
+          },
+          "ClrSys": {
+            "Prtry": {
+              "_text": "ST2"
+            }
+          }
+        },
+        "InstdAgt": {
+          "FinInstnId": {
+            "BIC": {
+              "_text": "BCYPCY2N"
+            }
+          }
+        }
+      },
+      "CdtTrfTxInf": {
+        "PmtId": {
+          "InstrId": {
+            "_text": "DEUTDE0920000891"
+          },
+          "EndToEndId": {
+            "_text": "NOTPROVIDED"
+          },
+          "TxId": {
+            "_text": "DEUTDEFF011OS10222891"
+          }
+        },
+        "PmtTpInf": {
+          "SvcLvl": {
+            "Cd": {
+              "_text": "SEPA"
+            }
+          }
+        },
+        "IntrBkSttlmAmt": {
+          "_attributes": {
+            "Ccy": "EUR"
+          },
+          "_text": 20
+        },
+        "ChrgBr": {
+          "_text": "SLEV"
+        },
+        "InstgAgt": {
+          "FinInstnId": {
+            "BIC": {
+              "_text": "DEUTDEFFXXX"
+            }
+          }
+        },
+        "Dbtr": {
+          "Nm": {
+            "_text": "Debtor name"
+          },
+          "PstlAdr": {
+            "Ctry": {
+              "_text": "DE"
+            },
+            "AdrLine": [
+              {
+                "_text": "Indirizzo 1 Dbtr"
+              },
+              {
+                "_text": "Indirizzo 2 Dbtr"
+              }
+            ]
+          },
+          "Id": {
+            "OrgId": {
+              "Othr": {
+                "Id": {
+                  "_text": "PT50078101120112001285102"
+                },
+                "SchmeNm": {
+                  "Cd": {
+                    "_text": "BANK"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "DbtrAcct": {
+          "Id": {
+            "IBAN": {
+              "_text": "DE73340302860352858328"
+            }
+          }
+        },
+        "DbtrAgt": {
+          "FinInstnId": {
+            "BIC": {
+              "_text": "DEUTDEFFXXX"
+            }
+          }
+        },
+        "CdtrAgt": {
+          "FinInstnId": {
+            "BIC": {
+              "_text": "BCYPCY2N"
+            }
+          }
+        },
+        "Cdtr": {
+          "Nm": {
+            "_text": "CREDITOR NAME"
+          },
+          "PstlAdr": {
+            "Ctry": {
+              "_text": "GR"
+            },
+            "AdrLine": [
+              {
+                "_text": "ADDRESS 1"
+              },
+              {
+                "_text": "ATHENS"
+              }
+            ]
+          },
+          "Id": {
+            "OrgId": {
+              "Othr": {
+                "Id": {
+                  "_text": "PT60078101120112001285102"
+                },
+                "SchmeNm": {
+                  "Cd": {
+                    "_text": "BANK"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CdtrAcct": {
+          "Id": {
+            "IBAN": {
+              "_text": "GR2703801380000000000089777"
+            }
+          }
+        },
+        "RmtInf": {
+          "Ustrd": {
+            "_text": "Rem. Info"
+          }
+        }
+      }
+    }
+  }
+}

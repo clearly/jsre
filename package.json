@@ -1,0 +1,36 @@
+{
+  "name": "jsre",
+  "version": "0.0.1",
+  "description": "JSON based rules engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=12.11.0"
+  },
+  "engineStrict": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clearly/jsre.git"
+  },
+  "keywords": [
+    "json",
+    "rules",
+    "engine"
+  ],
+  "author": "Aaron Bawcom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clearly/jsre/issues"
+  },
+  "homepage": "https://github.com/clearly/jsre#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "ajv": "^6.10.2",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15"
+  }
+}

@@ -1,0 +1,59 @@
+---
+"$schema": http://json-schema.org/draft-07/schema#
+"$id": http://github.com/clearly/jsre/lib/ruleSchema
+type: array
+items:
+  type: object
+  required:
+  - conditions
+  properties:
+    name:
+      type: string
+      title: The condition name schema
+      default: ''
+      pattern: "^(.*)$"
+    conditions:
+      "$ref": "#/definitions/conditionCollection"
+definitions:
+  value:
+    oneOf:
+    - not:
+        type: object
+    - type: object
+      required:
+      - path
+      properties:
+        path:
+          type: string
+  condition:
+    type: object
+    title: The Items Schema
+    required:
+    - operator
+    - lhs
+    - rhs
+    properties:
+      operator:
+        type: string
+      lhs:
+        "$ref": "#/definitions/value"
+      rhs:
+        "$ref": "#/definitions/value"
+  conditionCollection:
+    oneOf:
+    - type: object
+      required:
+      - all
+      properties:
+        all:
+          type: array
+          items:
+            "$ref": "#/definitions/condition"
+    - type: object
+      required:
+      - any
+      properties:
+        any:
+          type: array
+          items:
+            "$ref": "#/definitions/condition"
