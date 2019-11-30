@@ -57,3 +57,6 @@ Operators are very easy to add and are kept pluggable in a directory called
 # Requests
 Requests for added functionality are welcome and will be implemented without
 asking for pull requests or $ =)
+
+#Docs
+[Documentation](docs/conditions.md)

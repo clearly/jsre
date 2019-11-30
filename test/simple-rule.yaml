@@ -1,8 +1,0 @@
----
-- name: NbOfTxs
-  conditions:
-    all:
-    - operator: equal
-      lhs: 1
-      rhs:
-        path: 'Document.FIToFICstmrCdtTrf.GrpHdr.NbOfTxs._text'

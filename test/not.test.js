@@ -8,8 +8,10 @@ const rules = [
     conditions: {
       all: [
         {
-          operator: "equal",
-          lhs: 1,
+          operator: {
+            not: "equal"
+          },
+          lhs: 2,
           rhs: {
             path: "prop1.prop2.prop3"
           }
@@ -19,8 +21,11 @@ const rules = [
   }
 ];
 
-test('example rule pass', () => {
+
+
+test('not rule pass', () => {
   const testDocument = { prop1 : { prop2 : { prop3 : 1 } } };
+
   const engine = new Engine( { rules } );
   const results = engine.run( testDocument );
   expect(results).toHaveProperty('success');
@@ -28,7 +33,7 @@ test('example rule pass', () => {
 });
 
 
-test('example rule fail', () => {
+test('not rule fail', () => {
   const testDocument = { prop1 : { prop2 : { prop3 : 2 } } };
   const engine = new Engine( { rules } );
   const results = engine.run( testDocument );

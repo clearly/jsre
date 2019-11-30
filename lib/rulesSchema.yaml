@@ -15,6 +15,15 @@ items:
     conditions:
       "$ref": "#/definitions/conditionCollection"
 definitions:
+  operator:
+    oneOf:
+    - type: string
+    - type: object
+      required:
+      - not
+      properties:
+        not:
+          type: string
   value:
     oneOf:
     - not:
@@ -34,13 +43,14 @@ definitions:
     - rhs
     properties:
       operator:
-        type: string
+        "$ref": "#/definitions/operator"
       lhs:
         "$ref": "#/definitions/value"
       rhs:
         "$ref": "#/definitions/value"
   conditionCollection:
     oneOf:
+    - "$ref": "#/definitions/condition"
     - type: object
       required:
       - all
@@ -48,7 +58,7 @@ definitions:
         all:
           type: array
           items:
-            "$ref": "#/definitions/condition"
+            "$ref": "#/definitions/conditionCollection"
     - type: object
       required:
       - any
@@ -56,4 +66,4 @@ definitions:
         any:
           type: array
           items:
-            "$ref": "#/definitions/condition"
+            "$ref": "#/definitions/conditionCollection"

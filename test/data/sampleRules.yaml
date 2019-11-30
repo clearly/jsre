@@ -1,0 +1,28 @@
+[
+  {
+    conditions: {
+      all: [
+        {
+          any : [
+            {
+              operator: "greaterThan",
+              lhs: {
+                path: "prop1"
+              },
+              rhs: {
+                path: "prop2"
+              }
+            },
+            {
+              operator: "lessThan",
+              lhs: {
+                path: "prop2"
+              },
+              rhs: 10
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
