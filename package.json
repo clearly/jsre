@@ -1,6 +1,6 @@
 {
   "name": "jsre",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "JSON based rules engine",
   "main": "index.js",
   "scripts": {
