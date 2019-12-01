@@ -1,5 +1,5 @@
 # Build Info
-![Statements](badges/badge-statements.svg) ![Functions](badges/badge-functions.svg) ![Lines](badges/badge-lines.svg) ![Statements](badges/badge-statements.svg)
+![Statements](badges/badge-statements.svg) ![Functions](badges/badge-functions.svg) ![Lines](badges/badge-lines.svg) ![Branches](badges/badge-branches.svg)
 
 # JSon Rules Engine
 There are several JSON rules engines avaialable so why build another one?
