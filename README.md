@@ -6,7 +6,7 @@ There are several JSON rules engines avaialable so why build another one?
 As usual, the ones out there were not really a good fit. So this package is
 based on the following focus:
 
-1. Dreived facts should be computed to the document of inspection before the
+1. Derived facts should be computed to the document of inspection before the
 business rules are run
 1. Use the latest ES7 based capabilities in the implementation to eliminate
 unnecessary boiler plate
