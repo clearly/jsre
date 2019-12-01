@@ -1,3 +1,5 @@
+# Build Info
+[![Build Status](https://travis-ci.org/clearly/jsre.png?branch=master)](https://travis-ci.org/clearly/jsre)
 # JSon Rules Engine
 There are several JSON rules engines avaialable so why build another one?
 As usual, the ones out there were not really a good fit. So this package is

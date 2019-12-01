@@ -3,4 +3,8 @@ git:
   quiet: true
 language: node_js
 node_js:
-  - 12  
+  - 12
+script:
+- npm run coverage
+before_install:
+- npm install --save jest-coverage-badges
