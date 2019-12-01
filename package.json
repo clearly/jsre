@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --verbose",
     "coverage": "jest --coverage",
-    "badges": "npm run coverage && jest-coverage-badges"
+    "badges": "npm run coverage && jest-coverage-badges --output \"./badges\""
   },
   "jest": {
     "coverageReporters": [
