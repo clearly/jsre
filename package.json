@@ -5,9 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
     "badges": "npm run coverage && jest-coverage-badges"
   },
+  "jest": {
+    "coverageReporters": [
+      "json-summary", 
+      "text",
+      "lcov"
+    ]
+  }  ,
   "engines": {
     "node": ">=12.11.0"
   },
