@@ -38,3 +38,13 @@ test('regex fail', () => {
   expect(results.success).toBe(false);
 });
 
+test('bad regex specification fail', () => {
+  const testDocument = { prop1 : .221 };
+  const rules = _.cloneDeep( rulesTemplate );
+  rules[ 0 ].conditions.all[ 0 ].lhs = "sel/\\";
+  const engine = new Engine( { rules } );
+  const results = engine.run( testDocument );
+  // console.log( JSON.stringify( results, null, 2 ) );
+  expect(results).toHaveProperty('success');
+  expect(results.success).toBe(false);
+});

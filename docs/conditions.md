@@ -39,10 +39,12 @@ Remember to double escape `\\` special characters in the double quoted string
 All condition operations use values to evaluate the condition. The `lhs`
 and `rhs` value specifications are those values.
 1. A value can be a constant
-1. A value can be a path specification. Path specifications use the `lodash`
-library for path resolution.
+1. A value can have a path specification. `path` specifications use the `lodash`
+library for path resolution using `_.get`.
+1. A value can be an exists specification. `exists` specifications use the `lodash`
+library for path resolution using `_.has`.
 
-### Example of path specification 
+### Example of `path` specification 
 ```
 {
   operator: {
@@ -55,3 +57,13 @@ library for path resolution.
 }
 ```
 
+### Example of `exists` specification 
+```
+{
+  operator: "equal",
+  lhs: {
+    exists: "prop1.prop2"
+  },
+  rhs: true
+}
+```

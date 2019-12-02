@@ -34,6 +34,12 @@ definitions:
       properties:
         path:
           type: string
+    - type: object
+      required:
+      - exists
+      properties:
+        exists:
+          type: string
   condition:
     type: object
     title: The Items Schema
