@@ -35,12 +35,12 @@
   },
   "homepage": "https://github.com/clearly/jsre#readme",
   "devDependencies": {
-    "jest": "^24.9.0",
+    "jest": "^26.4.2",
     "jest-coverage-badges": "^1.1.2"
   },
   "dependencies": {
     "ajv": "^6.10.2",
     "js-yaml": "^3.13.1",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.20"
   }
 }
