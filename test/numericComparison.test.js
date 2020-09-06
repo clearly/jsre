@@ -181,12 +181,12 @@ describe('numeric comparisons', () => {
     
     expect(results).toHaveProperty('success');
     expect(results.success).toBe(false);
-    expect(results).toHaveProperty('errors');
-    expect(results.errors).toHaveProperty('length');
-    expect(results.errors.length).toBe(1);
-    expect(results.errors[0]).toHaveProperty('error');
-    expect(results.errors[0].error).toHaveProperty('operatorError');
-    expect(results.errors[0].error.operatorError).toBe(true);
+    expect(results).toHaveProperty('failures');
+    expect(results.failures).toHaveProperty('length');
+    expect(results.failures.length).toBe(1);
+    expect(results.failures[0]).toHaveProperty('error');
+    expect(results.failures[0].error).toHaveProperty('operatorError');
+    expect(results.failures[0].error.operatorError).toBe(true);
   });
   
   test('greaterThan does not accept a null value', () => {
@@ -198,12 +198,12 @@ describe('numeric comparisons', () => {
     
     expect(results).toHaveProperty('success');
     expect(results.success).toBe(false);
-    expect(results).toHaveProperty('errors');
-    expect(results.errors).toHaveProperty('length');
-    expect(results.errors.length).toBe(1);
-    expect(results.errors[0]).toHaveProperty('error');
-    expect(results.errors[0].error).toHaveProperty('operatorError');
-    expect(results.errors[0].error.operatorError).toBe(true);
+    expect(results).toHaveProperty('failures');
+    expect(results.failures).toHaveProperty('length');
+    expect(results.failures.length).toBe(1);
+    expect(results.failures[0]).toHaveProperty('error');
+    expect(results.failures[0].error).toHaveProperty('operatorError');
+    expect(results.failures[0].error.operatorError).toBe(true);
   });  
 
   test('greaterThan does not accept a missing property', () => {
@@ -217,12 +217,12 @@ describe('numeric comparisons', () => {
     
     expect(results).toHaveProperty('success');
     expect(results.success).toBe(false);
-    expect(results).toHaveProperty('errors');
-    expect(results.errors).toHaveProperty('length');
-    expect(results.errors.length).toBe(1);
-    expect(results.errors[0]).toHaveProperty('error');
-    expect(results.errors[0].error).toHaveProperty('operatorError');
-    expect(results.errors[0].error.operatorError).toBe(true);
+    expect(results).toHaveProperty('failures');
+    expect(results.failures).toHaveProperty('length');
+    expect(results.failures.length).toBe(1);
+    expect(results.failures[0]).toHaveProperty('error');
+    expect(results.failures[0].error).toHaveProperty('operatorError');
+    expect(results.failures[0].error.operatorError).toBe(true);
   });
   
   test('lessThan floating point pass', () => {

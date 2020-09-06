@@ -39,6 +39,6 @@ test('not rule fail', () => {
   const results = engine.run( testDocument );
   expect(results).toHaveProperty('success');
   expect(results.success).toBe(false);
-  expect(results).toHaveProperty('errors');
-  expect(results.errors.length).toBe(1);
+  expect(results).toHaveProperty('failures');
+  expect(results.failures.length).toBe(1);
 });

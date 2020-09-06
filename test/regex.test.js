@@ -59,7 +59,7 @@ test('regex capture', () => {
   expect(results).toHaveProperty( 'success' );
   expect(results.success).toBe( true );
   expect(results).toHaveProperty( 'rules' );
-  expect(results.rules[ 0 ].conditions.all[ 0 ].info ).toEqual(
+  expect( results.passes[ 0 ].info ).toEqual(
     expect.arrayContaining([ "1.1", "2.2", "32767" ]),
   );  
 });
