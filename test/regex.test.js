@@ -48,3 +48,18 @@ test('bad regex specification fail', () => {
   expect(results).toHaveProperty('success');
   expect(results.success).toBe(false);
 });
+
+test('regex capture', () => {
+  const testDocument = { prop1 : "Log: WinSock: version 1.1 (2.2), MaxSocks=32767" };
+  const rules = _.cloneDeep( rulesTemplate );
+  rules[ 0 ].conditions.all[ 0 ].lhs = "Log: WinSock: version ([^ ]+) \\(([^ ]+)\\), MaxSocks=(\\d+)";
+  const engine = new Engine( { rules } );
+  const results = engine.run( testDocument );
+  // console.log( JSON.stringify( results, null, 2 ) );
+  expect(results).toHaveProperty( 'success' );
+  expect(results.success).toBe( true );
+  expect(results).toHaveProperty( 'rules' );
+  expect(results.rules[ 0 ].conditions.all[ 0 ].info ).toEqual(
+    expect.arrayContaining([ "1.1", "2.2", "32767" ]),
+  );  
+});
