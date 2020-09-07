@@ -78,13 +78,13 @@ describe( 'Nested conditions test', () => {
     const engine = new Engine( { rules: rulesAllAny } );
     const results = engine.run( testDocument );
     
-    expect(results).toHaveProperty('success');
-    expect(results.success).toBe(true);
+    expect( results ).toHaveProperty('success');
+    expect( results.success ).toBe( true );
     
     // console.log( JSON.stringify( { results }, null, 2 ) );
 
-    expect(results.rules[0].conditions.all[0].any[0].success).toBe(true);
-    expect(results.rules[0].conditions.all[0].any[1].success).toBe(false);
+    expect( results.passes[ 0 ].success ).toBe( true );
+    expect( results.failures[ 0 ].success ).toBe( false );
   });
 
   test('conditions.any.all rule pass', () => {
