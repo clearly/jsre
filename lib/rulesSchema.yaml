@@ -54,6 +54,14 @@ definitions:
         "$ref": "#/definitions/value"
       rhs:
         "$ref": "#/definitions/value"
+      id:
+        type: string
+      depends:
+        oneOf:
+        - type: string
+        - type: array
+          items:
+            type: string
   conditionCollection:
     oneOf:
     - "$ref": "#/definitions/condition"

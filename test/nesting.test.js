@@ -81,7 +81,7 @@ describe( 'Nested conditions test', () => {
     expect(results).toHaveProperty('success');
     expect(results.success).toBe(true);
     
-    console.log( JSON.stringify( { results }, null, 2 ) );
+    // console.log( JSON.stringify( { results }, null, 2 ) );
 
     expect(results.rules[0].conditions.all[0].any[0].success).toBe(true);
     expect(results.rules[0].conditions.all[0].any[1].success).toBe(false);

@@ -23,6 +23,7 @@ test('example rule pass', () => {
   const testDocument = { prop1 : { prop2 : { prop3 : 1 } } };
   const engine = new Engine( { rules } );
   const results = engine.run( testDocument );
+  console.log( JSON.stringify( { results }, null, 2 ) );
   expect(results).toHaveProperty('success');
   expect(results.success).toBe(true);
 });

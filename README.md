@@ -17,7 +17,8 @@ an API or an object moving through a streaming platform
 1. Lean on `lodash` for a lot of heavy lifting
 1. Like other rule engines, re-use the `rules` data structure to put the results
 of calculation to make it easier to diagnose failures
-1. In the results returned, returned a focused list of `errors` to simplify
+1. In the results returned, returned a focused list of `failures` and `passes` to simplify processing the output
+1. Allow for optional dependencies to encode a hierarchy into flat lists
 diagnosing errors
  
 # Example
@@ -50,9 +51,56 @@ test('example rule pass', () => {
   
   const engine = new Engine( { rules } );
   const results = engine.run( testDocument );
+  console.log( JSON.stringify( { results }, null, 2 ) );  
   expect(results).toHaveProperty('success');
   expect(results.success).toBe(true);
 });
+
+Output:
+  {
+    "results": {
+      "rules": [
+        {
+          "conditions": {
+            "all": [
+              {
+                "operator": "equal",
+                "lhs": 1,
+                "rhs": {
+                  "path": "prop1.prop2.prop3"
+                },
+                "success": true,
+                "calculation": {
+                  "lhs": 1,
+                  "rhs": 1,
+                  "not": false
+                }
+              }
+            ]
+          },
+          "success": true
+        }
+      ],
+      "failures": [],
+      "passes": [
+        {
+          "operator": "equal",
+          "lhs": 1,
+          "rhs": {
+            "path": "prop1.prop2.prop3"
+          },
+          "success": true,
+          "calculation": {
+            "lhs": 1,
+            "rhs": 1,
+            "not": false
+          }
+        }
+      ],
+      "success": true
+    }
+  }
+
 ```
 
 # Operators

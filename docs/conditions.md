@@ -8,13 +8,16 @@
   rhs: 1
 }
 ```
-1. An operator must be specified. `Operators`
-1. The `lhs` and `rhs` properties must exist
+1. Conditions can include sets of `any` or `all`
+1. A condition may specify an `operator`
+1. If an `operator` is specified, the `lhs` and `rhs` properties must exist
 
 ## Operators
-1. An operator specification can be a string representing an operator
+1. An operator specification can be a string representing an `operator` name
 1. An operator specification can be an object with a single property of `not`.
 The value of the `not` property is the actual operator.
+1. Operators can include a property on the `condition` named `info` which can contain extra info
+about the evaluation of the operator.
 
 ### Example of not operator specification
 ```
@@ -33,7 +36,8 @@ The value of the `not` property is the actual operator.
 * `in` - Tests if a single value or a sebset of values in the `lhs` exist in
 the `rhs`
 * `regex` - Tests if the regex pattern in `lhs` matches the value of `rhs`.
-Remember to double escape `\\` special characters in the double quoted string
+Remember to double escape `\\` special characters in the double quoted string.
+The `regex` operator will also output any strings captured from the evaluation in the `info` property
 
 ## Values (`lhs` and `rhs`)
 All condition operations use values to evaluate the condition. The `lhs`
@@ -67,3 +71,9 @@ library for path resolution using `_.has`.
   rhs: true
 }
 ```
+
+## Depedencies
+A condition can include an optional `depends` attribute which must either be a single string or an array of strings.
+A dependent string value will be evaluated against any other conditions who included an optional `id` property in the
+condition statement.
+
